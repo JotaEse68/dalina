@@ -413,27 +413,10 @@ input[value=anafilaxia]:checked + .sev-lbl { background:#3d0000; border-color:#3
   .dalina-intro-speech p{font-size:12px;}
 }
 @media print {
-  .hdr,.steps-nav,.nav-btns,.sum-actions,.modal-overlay,.cam-modal,.risk-banner,.dalina-row,.dalina-intro,.sb-banner-wrap{display:none!important;}
+  .hdr,.steps-nav,.nav-btns,.sum-actions,.modal-overlay,.cam-modal,.risk-banner,.dalina-row,.dalina-intro{display:none!important;}
   body{background:#fff;}
   .sum-body{box-shadow:none;}
   #summary-view{display:block!important;}
-  #copyright-block{display:block!important;margin-top:20px;}
-  #sb-banner{display:none!important;}
-  @page {
-    margin: 1.5cm;
-  }
-}
-/* Watermark en impresión */
-@media print {
-  body::after {
-    content: "AlimentIA Consulting Group LLC · Confidencial";
-    position: fixed;
-    bottom: 0.5cm;
-    right: 0.5cm;
-    font-size: 8px;
-    color: #c0c8d8;
-    font-family: sans-serif;
-  }
 }
 </style>
 </head>
@@ -451,7 +434,7 @@ input[value=anafilaxia]:checked + .sev-lbl { background:#3d0000; border-color:#3
   </div>
 
   <div class="risk-banner" id="risk-banner">
-  ⚠️ ALERTA MÁXIMA · RIESGO DE ANAFILAXIA — Activar código de emergencia en AlimentIA inmediatamente
+  ⚠️ ALERTA MÁXIMA · RIESGO DE ANAFILAXIA — Activar código de emergencia en UCALCARE inmediatamente
 </div>
 
 <!-- HEADER -->
@@ -487,7 +470,7 @@ input[value=anafilaxia]:checked + .sev-lbl { background:#3d0000; border-color:#3
 <div class="modal-overlay" id="email-modal">
   <div class="modal">
     <h3>Enviar ficha al supervisor</h3>
-    <p>Se enviará un resumen completo de la ficha a la persona responsable de coordinación para su revisión y activación en AlimentIA.</p>
+    <p>Se enviará un resumen completo de la ficha a la persona responsable de coordinación para su revisión y activación en UCALCARE.</p>
     <div class="fg">
       <label class="lbl">Email del supervisor / coordinación</label>
       <input type="email" id="supervisor-email" placeholder="supervisor@ucalsa.com">
@@ -548,7 +531,7 @@ input[value=anafilaxia]:checked + .sev-lbl { background:#3d0000; border-color:#3
     </div>
     <div class="frow fg">
       <div>
-        <label class="lbl">Nº Expediente AlimentIA <span class="req">*</span></label>
+        <label class="lbl">Nº Expediente UCALCARE <span class="req">*</span></label>
         <input type="text" id="expediente" placeholder="EXP-00000">
       </div>
       <div>
@@ -958,14 +941,14 @@ input[value=anafilaxia]:checked + .sev-lbl { background:#3d0000; border-color:#3
       </div>
     </div>
     <div class="fg">
-      <label class="lbl">¿Registrado en AlimentIA?</label>
+      <label class="lbl">¿Registrado en UCALCARE?</label>
       <div class="pill-group">
         <input type="radio" class="pill-opt" name="ucalcare_ok" id="uc1" value="si"><label class="pill-lbl" for="uc1">✅ Sí</label>
         <input type="radio" class="pill-opt" name="ucalcare_ok" id="uc0" value="pendiente"><label class="pill-lbl" for="uc0">🕐 Pendiente</label>
       </div>
     </div>
     <div class="fg">
-      <label class="lbl">¿Código de alerta activado en AlimentIA?</label>
+      <label class="lbl">¿Código de alerta activado en UCALCARE?</label>
       <div class="pill-group">
         <input type="radio" class="pill-opt" name="alerta_ok" id="alt1" value="si"><label class="pill-lbl" for="alt1">✅ Activado</label>
         <input type="radio" class="pill-opt" name="alerta_ok" id="alt0" value="no_procede"><label class="pill-lbl" for="alt0">No procede</label>
@@ -1007,7 +990,7 @@ input[value=anafilaxia]:checked + .sev-lbl { background:#3d0000; border-color:#3
     <div class="sum-hdr">
       <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px">
         <div>
-          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8fa8c8;margin-bottom:4px">DALINA · AlimentIA Consulting Group · Ficha de Alta Nutricional</div>
+          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8fa8c8;margin-bottom:4px">DALINA · UCALSA · Ficha de Alta Nutricional</div>
           <h2 id="sum-titulo">—</h2>
           <div id="sum-expediente" style="color:#8fa8c8;font-size:13px;margin-top:4px"></div>
         </div>
@@ -1027,12 +1010,6 @@ input[value=anafilaxia]:checked + .sev-lbl { background:#3d0000; border-color:#3
         <div class="sum-sec-title">✍️ Firma digital</div>
         <img id="sum-sig-img" style="max-width:280px;border:1px solid #dde4ed;border-radius:8px">
       </div>
-    </div>
-    <div id="copyright-block" style="margin-top:16px;padding:12px 16px;background:#f0f4ff;border:0.5px solid #c8d8f0;border-radius:8px;font-size:10px;color:#475569;line-height:1.6;">
-      <div style="font-weight:700;color:#0f1f3d;margin-bottom:4px;">© AlimentIA Consulting Group LLC · Todos los derechos reservados</div>
-      <div>Este documento y el software que lo genera son propiedad exclusiva de <strong>AlimentIA Consulting Group LLC</strong>, empresa constituida bajo las leyes del Estado de Delaware, EE.UU. Protegido por las leyes de propiedad intelectual de los Estados Unidos de América (<em>U.S. Copyright Act, 17 U.S.C. §101 et seq.</em>), el <em>Digital Millennium Copyright Act (DMCA)</em> y los tratados internacionales aplicables.</div>
-      <div style="margin-top:4px;">Queda expresamente prohibida la reproducción total o parcial, la distribución, la ingeniería inversa, la modificación o cualquier uso comercial de este sistema sin autorización escrita previa de AlimentIA Consulting Group LLC. El incumplimiento podrá dar lugar a acciones civiles y penales. <em>All rights reserved. Unauthorized reproduction or distribution of this software or its output is strictly prohibited.</em></div>
-      <div style="margin-top:6px;font-size:9px;color:#8fa8c8;">DALINA® · AlimentIA Consulting Group LLC · Primera publicación: Mayo 2025 · Registro de obra: pendiente USPTO · contact@alimentia.ai</div>
     </div>
     <div id="sb-banner" style="display:none;background:#eef9f4;border:1.5px solid #2d9e5f;border-radius:12px;padding:12px 16px;margin-bottom:12px;font-size:13px;color:#1a5c3a;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;"></div>
     <div class="sum-actions">
@@ -1055,19 +1032,11 @@ let sb = null;
 // Cargar Supabase de forma async
 (function loadSupabase() {
   const s = document.createElement('script');
-  s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.js';
+  s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
   s.onload = () => {
-    try {
-      sb = window.supabase.createClient(SB_URL, SB_KEY, {
-        auth: { persistSession: false, autoRefreshToken: false }
-      });
-      console.log('[DALINA] Supabase client OK');
-      cargarOrganizaciones();
-    } catch(e) {
-      console.error('[DALINA] Supabase init error:', e.message);
-    }
+    sb = window.supabase.createClient(SB_URL, SB_KEY);
+    cargarOrganizaciones();
   };
-  s.onerror = (e) => console.error('[DALINA] Supabase CDN load error:', e);
   document.head.appendChild(s);
 })();
 
@@ -1176,9 +1145,7 @@ async function guardarEnSupabase() {
     _comensal_id_guardado = result?.id || null;
     return _comensal_id_guardado;
   } catch(e) {
-    console.error('[DALINA] Supabase error completo:', e);
-    console.error('[DALINA] mensaje:', e.message);
-    console.error('[DALINA] código:', e.code);
+    console.warn('[DALINA] Supabase error:', e.message);
     return null;
   }
 }
@@ -1603,7 +1570,7 @@ function generateSummary() {
   const ucMap={si:'✅ Alta completada',pendiente:'🕐 Pendiente'};
   const altMap={si:'✅ Activado',no_procede:'No procede',pendiente:'🕐 Pendiente'};
   let adm = row('RGPD/Consentimiento',rgpdMap[radio('rgpd')]);
-  adm += row('Registro AlimentIA',ucMap[radio('ucalcare_ok')]);
+  adm += row('UCALCARE',ucMap[radio('ucalcare_ok')]);
   adm += row('Código alerta',altMap[radio('alerta_ok')]);
   adm += row('Prioridad',{urgente:'🔴 URGENTE',alta:'🟡 Alta',normal:'🟢 Normal'}[prio]);
   document.getElementById('sum-admin').innerHTML = adm;
@@ -1676,7 +1643,7 @@ function buildEmailText() {
   const relMap={'hijo_hija':'Hijo/Hija','conyugue':'Cónyuge/Pareja','hermano_hermana':'Hermano/Hermana','sobrino_sobrina':'Sobrino/Sobrina','nieto_nieta':'Nieto/Nieta','cuidador_profesional':'Cuidador/a profesional','vecino_vecina':'Vecino/Vecina','tutora_legal':'Tutor/a legal','otro':'Otro'};
   const relSel = document.getElementById('relacion_familiar')?.value;
   const meals = getMeals();
-  return `FICHA DE ALTA NUTRICIONAL — DALINA · AlimentIA Consulting Group
+  return `FICHA DE ALTA NUTRICIONAL — DALINA · UCALSA
 ${'='.repeat(48)}
 Comensal: ${nombre}
 Expediente: ${v('expediente')} | Fecha: ${v('fecha_eval')}
@@ -1699,7 +1666,7 @@ Dieta base: ${radio('dieta_base')} | Textura: ${radio('textura')}
 Complementos: ${getComps().join(', ')||'—'}
 
 Informe médico: ${radio('informe_medico')}
-Registro AlimentIA: ${radio('ucalcare_ok')} | Código alerta: ${radio('alerta_ok')}
+UCALCARE: ${radio('ucalcare_ok')} | Código alerta: ${radio('alerta_ok')}
 RGPD: ${radio('rgpd')}
 PRIORIDAD: ${prio.toUpperCase()}
 
@@ -1711,7 +1678,7 @@ Generado por DALINA · AlimentIA Consulting Group — Dietas, ALergias e INtoler
 }
 
 function copyToClipboard() {
-  navigator.clipboard.writeText(buildEmailText()).then(()=>alert('✅ Resumen copiado. Puedes pegarlo en AlimentIA o enviarlo por email.')).catch(()=>alert('Usa el botón de imprimir para generar PDF.'));
+  navigator.clipboard.writeText(buildEmailText()).then(()=>alert('✅ Resumen copiado. Puedes pegarlo en UCALCARE o por email.')).catch(()=>alert('Usa el botón de imprimir para generar PDF.'));
 }
 
 // ===== INIT =====
